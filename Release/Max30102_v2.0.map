@@ -189,7 +189,7 @@ LOAD d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bi
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x2906
+.text           0x00000000     0x293e
  *(.vectors)
  .vectors       0x00000000       0x54 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -516,36 +516,36 @@ LOAD d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bi
                 0x00002262      0x138 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
                 0x00002262                HR_OXIMETER_ReadFIFO
  .text.HR_OXIMETER_vCalculateHeartRateAndOxygen
-                0x0000239a      0x2fc ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x0000239a      0x334 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
                 0x0000239a                HR_OXIMETER_vCalculateHeartRateAndOxygen
  .text.HR_OXIMETER_vCollectGroupOfSamples
-                0x00002696       0x60 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x00002696                HR_OXIMETER_vCollectGroupOfSamples
+                0x000026ce       0x60 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x000026ce                HR_OXIMETER_vCollectGroupOfSamples
  .text.HR_OXIMETER_vInit
-                0x000026f6      0x132 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x000026f6                HR_OXIMETER_vInit
+                0x0000272e      0x132 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x0000272e                HR_OXIMETER_vInit
  .text.TURONLED
-                0x00002828        0xc ./App/main.o
-                0x00002828                TURONLED
- .text.main     0x00002834       0x34 ./App/main.o
-                0x00002834                main
+                0x00002860        0xc ./App/main.o
+                0x00002860                TURONLED
+ .text.main     0x0000286c       0x34 ./App/main.o
+                0x0000286c                main
  .text.testUART
-                0x00002868       0x14 ./App/main.o
-                0x00002868                testUART
- .text.libgcc   0x0000287c       0x18 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
-                0x0000287c                __udivmodqi4
- .text.libgcc   0x00002894        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00002894        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00002894       0x38 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x00002894                __prologue_saves__
- .text.libgcc   0x000028cc       0x36 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x000028cc                __epilogue_restores__
- .text.libgcc   0x00002902        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
-                0x00002902                . = ALIGN (0x2)
+                0x000028a0       0x14 ./App/main.o
+                0x000028a0                testUART
+ .text.libgcc   0x000028b4       0x18 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+                0x000028b4                __udivmodqi4
+ .text.libgcc   0x000028cc        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x000028cc        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x000028cc       0x38 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x000028cc                __prologue_saves__
+ .text.libgcc   0x00002904       0x36 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00002904                __epilogue_restores__
+ .text.libgcc   0x0000293a        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x0000293a                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00002902        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00002902                exit
-                0x00002902                _exit
+ .fini9         0x0000293a        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x0000293a                exit
+                0x0000293a                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -564,11 +564,11 @@ LOAD d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bi
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00002902        0x4 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000293a        0x4 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00002906                _etext = .
+                0x0000293e                _etext = .
 
-.data           0x00800060      0x108 load address 0x00002906
+.data           0x00800060      0x108 load address 0x0000293e
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -683,13 +683,13 @@ LOAD d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bi
  .bss.G_u16PulseDetected
                 0x0080019b        0x2 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
                 0x0080019b                G_u16PulseDetected
- .bss.L_u32LastBeat.1616
+ .bss.L_u32LastBeat.1622
                 0x0080019d        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
- .bss.L_u32CurrentBeat.1615
+ .bss.L_u32CurrentBeat.1621
                 0x008001a1        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
- .bss.L_u8ValuesWentDown.1614
+ .bss.L_u8ValuesWentDown.1620
                 0x008001a5        0x1 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
- .bss.L_f32PrevSensorValue.1613
+ .bss.L_f32PrevSensorValue.1619
                 0x008001a6        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
  *(COMMON)
  COMMON         0x008001aa        0x2 ./MCAL/UART/UART_prg.o
@@ -719,8 +719,8 @@ LOAD d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bi
                 0x0080024c                dcFilterRed
                 0x00800254                G_u8CurrentPulseDetectorState
                 0x00800255                PROVIDE (__bss_end, .)
-                0x00002906                __data_load_start = LOADADDR (.data)
-                0x00002a0e                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000293e                __data_load_start = LOADADDR (.data)
+                0x00002a46                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800255        0x0
                 0x00800255                PROVIDE (__noinit_start, .)

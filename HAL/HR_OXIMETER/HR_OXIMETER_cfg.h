@@ -21,7 +21,7 @@
     SAMPLEAVG_16
     SAMPLEAVG_32
  */
-#define SAMPLEAVG_SELECTED SAMPLEAVG_4
+#define SAMPLEAVG_SELECTED SAMPLEAVG_8
 
 /* ************************************* */
 /* Mode Control Configuration */

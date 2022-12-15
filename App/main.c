@@ -32,21 +32,21 @@ int main(void)
 
     UART_vInit();
     HR_OXIMETER_vInit();
-    u32 counter = 800;
+    u32 counter = 2000;
     // You have to call this function with frequency at least 37Hz. But the closer you call it to 100Hz the better, the filter will work.
 
     while (counter > 0)
     {
-         HR_OXIMETER_vCalculateHeartRateAndOxygen();
-         counter--;
+        HR_OXIMETER_vCalculateHeartRateAndOxygen();
+        counter--;
     }
 
     /* code */
     while (1)
     {
         // HR_OXIMETER_vCalculateHeartRateAndOxygen();
-         //testUART();
-        //_delay_ms(3000);
+        // testUART();
+        // _delay_ms(3000);
         // HR_OXIMETER_vCollectGroupOfSamples();
         //_delay_ms(1000);
     }

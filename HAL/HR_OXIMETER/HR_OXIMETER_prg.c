@@ -168,12 +168,13 @@ FIFO_SAMPLE HR_OXIMETER_ReadFIFO()
     L_u32IRLedSample = ((u32)(L_u8TempBuff[0])) << 16;
     L_u32IRLedSample |= ((u32)L_u8TempBuff[1]) << 8;
     L_u32IRLedSample |= ((u32)L_u8TempBuff[2]) << 0;
-    L_u32IRLedSample &= MSB_MASK; // MASK From Bit 18-32
+    L_u32IRLedSample &= MSB_MASK; // MASK From Bit 18-31
     /* RED LED*/
     L_u32RedLedSample = ((u32)(L_u8TempBuff[3])) << 16;
     L_u32RedLedSample |= ((u32)L_u8TempBuff[4]) << 8;
     L_u32RedLedSample |= ((u32)L_u8TempBuff[5]) << 0;
-    L_u32RedLedSample &= MSB_MASK; // MASK From Bit 18-32
+    L_u32RedLedSample &= MSB_MASK; // MASK From Bit 18-31
+
     L_sample.rawIR = L_u32IRLedSample;
     L_sample.rawRED = L_u32RedLedSample;
     /* Set RD PTR to 0x00 */
@@ -195,14 +196,14 @@ void HR_OXIMETER_vCalculateHeartRateAndOxygen()
 {
     u8 L_u8PulseDetected = FALSE;
     FIFO_SAMPLE L_sample = HR_OXIMETER_ReadFIFO();
-    display_data_Collected((u32)L_sample.rawIR, (u32)L_sample.rawRED);
+    // display_data_Collected((u32)L_sample.rawIR, (u32)L_sample.rawRED);
     dcFilterIR = HR_OXIMETER_DCRemoval((f32)L_sample.rawIR, dcFilterIR.w, ALPHA);
     dcFilterRed = HR_OXIMETER_DCRemoval((f32)L_sample.rawRED, dcFilterRed.w, ALPHA);
     // display_data_Collected((u32)dcFilterIR.result, (u32)dcFilterRed.result);
     f32 L_f32meanDiffResIr = HR_OXIMETER_f32MeanDiff(dcFilterIR.result, &meanDiffIR);
     // display_data_Collected((u32)L_f32meanDiffResIr, 0);
     HR_OXIMETER_vLowPassButterworthFilter(L_f32meanDiffResIr, &lpbFilterIR);
-    // display_data_Collected((u32)lpbFilterIR.result, 0);
+    display_data_Collected((u32)lpbFilterIR.result, 0);
     G_f32IrAcValueSqSum += dcFilterIR.result * dcFilterIR.result;
     G_f32RedAcValueSqSum += dcFilterRed.result * dcFilterRed.result;
     G_u16SamplesRecorded++;
@@ -212,18 +213,21 @@ void HR_OXIMETER_vCalculateHeartRateAndOxygen()
     {
         /* code */
         L_u8PulseDetected = TRUE;
+
         G_u16PulseDetected++;
         // f32 L_f32RedRatio = sqrt(G_f32RedAcValueSqSum / G_u16SamplesRecorded);
         // f32 L_f32IRRatio = sqrt(G_f32IrAcValueSqSum / G_u16SamplesRecorded);
         // f32 L_f32IRComponent = log(L_f32IRRatio);
         // f32 L_f32EDComponent = log(L_f32RedRatio);
         // f32 L_f32RatioRMS = L_f32EDComponent / L_f32IRComponent;
+
         // G_f32CurrentSaO2Value = 110.0 - 18.0 * L_f32RatioRMS;
     }
+
     if (L_u8PulseDetected == TRUE)
     {
         /* code */
-        // display_HeartRate_Oxygen((u32)G_f32CurrentBPM, G_f32CurrentSaO2Value);
+        display_HeartRate_Oxygen((u32)G_f32CurrentBPM, G_f32CurrentSaO2Value);
     }
 }
 /* ********************************************************************* */

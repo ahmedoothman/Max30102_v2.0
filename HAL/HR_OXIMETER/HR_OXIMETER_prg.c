@@ -41,6 +41,33 @@ volatile f32 G_f32CurrentSaO2Value = 0;
 volatile u16 G_u16SamplesRecorded = 0;
 volatile u16 G_u16PulseDetected = 0;
 
+// SparkFun Code
+u16 G_u16IRAcMax = 20;
+u16 G_u16IRAcMin = -20;
+
+u16 G_u16IRAcSignalCurrent = 0;
+u16 G_u16IRAcSignalPrevious;
+u16 G_u16IRAcSignalMin = 0;
+u16 G_u16IRAcSignalMax = 0;
+u16 G_u16IRAverageEstimated;
+
+u16 G_u16PositiveEdge = 0;
+u16 G_u16NegativeEdge;
+u32 G_u32IRAvgReg = 0;
+
+u16 G_u16Cbuf[32];
+u8 G_u8Offset = 0;
+
+static const u16 FIRCoeffs[12] = {172, 321, 579, 927, 1360, 1858, 2390, 2916, 3391, 3768, 4012, 4096};
+
+#define RATE_SIZE 4           // Increase this for more averaging. 4 is good.
+volatile u8 rates[RATE_SIZE]; // Array of heart rates
+volatile u8 rateSpot = 0;
+volatile u32 lastBeat = 0; // Time at which the last beat occurred
+
+float beatsPerMinute;
+int beatAvg;
+
 /* ********************************************************************* */
 /* ******************************** init ******************************* */
 /* ********************************************************************* */
@@ -227,7 +254,7 @@ void HR_OXIMETER_vCalculateHeartRateAndOxygen()
     if (L_u8PulseDetected == TRUE)
     {
         /* code */
-        display_HeartRate_Oxygen((u32)G_f32CurrentBPM, G_f32CurrentSaO2Value);
+        // display_HeartRate_Oxygen((u32)G_f32CurrentBPM, G_f32CurrentSaO2Value);
     }
 }
 /* ********************************************************************* */
@@ -353,6 +380,117 @@ void HR_OXIMETER_vLowPassButterworthFilter(f32 A_f32Input, Butterworth_Filter *A
     // A_filterResult->values[1] = (1.367287359973195227e-1 * A_f32Input) + (0.72654252800536101020 * A_filterResult->values[0]); //valuesery precise butterworth filter
 
     A_filterResult->result = A_filterResult->values[0] + A_filterResult->values[1];
+}
+
+/* *********************************************************** */
+/* SparkFun */
+/* *********************************************************** */
+void HR_OXIMETER_vHeartRate()
+{
+
+    FIFO_SAMPLE data = HR_OXIMETER_ReadFIFO();
+    display_data_Collected((u32)data.rawIR, (u32)data.rawRED);
+
+    // if (HR_OXIMETER_u8CheckForBeat(data.rawIR) == TRUE)
+    // {
+    //     u32 delta = G_u32Millis * TIME_CONSTANT - lastBeat;
+    //     lastBeat = G_u32Millis * TIME_CONSTANT;
+    //     beatsPerMinute = 60 / (delta / 1000.0);
+    //     if (beatsPerMinute < 255 && beatsPerMinute > 20)
+    //     {
+    //         rates[rateSpot++] = (u8)beatsPerMinute;
+    //         rateSpot %= RATE_SIZE;
+    //         beatAvg = 0;
+    //         for (u8 i = 0; i < RATE_SIZE; i++)
+    //         {
+    //             beatAvg += rates[i];
+    //             beatAvg /= RATE_SIZE;
+    //         }
+    //     }
+    // }
+    // display_HeartRate_Oxygen(beatsPerMinute, beatAvg);
+
+    // if (data.rawIR < 50000)
+    // {
+    //     display_HeartRate_Oxygen(0, 0);
+    // }
+}
+u8 HR_OXIMETER_u8CheckForBeat(u32 A_u32Sample)
+{
+    u8 beatDetected = FALSE;
+
+    //  Save current state
+    G_u16IRAcSignalPrevious = G_u16IRAcSignalCurrent;
+
+    //  Process next data sample
+    G_u16IRAverageEstimated = HR_OXIMETER_u16AverageDcEstimator(&G_u32IRAvgReg, A_u32Sample);
+    G_u16IRAcSignalCurrent = HR_OXIMETER_u16LowPassFIRFilter(A_u32Sample - G_u16IRAverageEstimated);
+
+    //  Detect positive zero crossing (rising edge)
+    if ((G_u16IRAcSignalPrevious < 0) & (G_u16IRAcSignalCurrent >= 0))
+    {
+
+        G_u16IRAcMax = G_u16IRAcSignalMax; // Adjust our AC max and min
+        G_u16IRAcMin = G_u16IRAcSignalMin;
+
+        G_u16PositiveEdge = 1;
+        G_u16NegativeEdge = 0;
+        G_u16IRAcSignalMax = 0;
+
+        // if ((IR_AC_Max - IR_AC_Min) > 100 & (IR_AC_Max - IR_AC_Min) < 1000)
+        if ((G_u16IRAcMax - G_u16IRAcMin) > 20 & (G_u16IRAcMax - G_u16IRAcMin) < 1500)
+        {
+            // Heart beat!!!
+            beatDetected = TRUE;
+        }
+    }
+
+    //  Detect negative zero crossing (falling edge)
+    if ((G_u16IRAcSignalPrevious > 0) & (G_u16IRAcSignalCurrent <= 0))
+    {
+        G_u16PositiveEdge = 0;
+        G_u16NegativeEdge = 1;
+        G_u16IRAcSignalMin = 0;
+    }
+
+    //  Find Maximum value in positive cycle
+    if (G_u16PositiveEdge & (G_u16IRAcSignalCurrent > G_u16IRAcSignalPrevious))
+    {
+        G_u16IRAcSignalMax = G_u16IRAcSignalCurrent;
+    }
+
+    //  Find Minimum value in negative cycle
+    if (G_u16PositiveEdge & (G_u16IRAcSignalCurrent < G_u16IRAcSignalPrevious))
+    {
+        G_u16IRAcSignalMin = G_u16IRAcSignalCurrent;
+    }
+
+    return (beatDetected);
+}
+u16 HR_OXIMETER_u16AverageDcEstimator(u32 *p, u16 x)
+{
+    *p += ((((u32)x << 15) - *p) >> 4);
+    return (*p >> 15);
+}
+u16 HR_OXIMETER_u16LowPassFIRFilter(u16 din)
+{
+    G_u16Cbuf[G_u8Offset] = din;
+
+    u32 z = HR_OXIMETER_u32Mull16(FIRCoeffs[11], G_u16Cbuf[(G_u8Offset - 11) & 0x1F]);
+
+    for (u8 i = 0; i < 11; i++)
+    {
+        z += HR_OXIMETER_u32Mull16(FIRCoeffs[i], G_u16Cbuf[(G_u8Offset - i) & 0x1F] + G_u16Cbuf[(G_u8Offset - 22 + i) & 0x1F]);
+    }
+
+    G_u8Offset++;
+    G_u8Offset %= 32; // Wrap condition
+
+    return (z >> 15);
+}
+u32 HR_OXIMETER_u32Mull16(u16 x, u16 y)
+{
+    return ((u32)x * (u32)y);
 }
 /* ********************************************************************* */
 /* *********************** Read Multiple Bytes ************************* */

@@ -1,9 +1,13 @@
 Archive member included because of file (symbol)
 
+d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                              ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o (__mulsi3)
 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
                               ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o (__udivmodqi4)
 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
                               d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
+d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o (__do_copy_data)
 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
                               ./MCAL/UART/UART_prg.o (__do_clear_bss)
 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
@@ -32,8 +36,6 @@ d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../
                               d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o) (__prologue_saves__)
 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
                               d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o) (__epilogue_restores__)
-d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
-                              d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o) (__do_copy_data)
 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
                               d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_si_to_sf.o) (__clzsi2)
 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
@@ -49,17 +51,24 @@ Allocating common symbols
 Common symbol       size              file
 
 G_f32ValuesBPM      0x28              ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+beatsPerMinute      0x4               ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+G_u16NegativeEdge   0x2               ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
 G_ISR_INT1_ptr      0x2               ./MCAL/EXTI/EXTI_prg.o
+G_u16IRAverageEstimated
+                    0x2               ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
 GLB_PTRF_TIM0_OVF   0x2               ./MCAL/TIMER/TIMER_prg.o
+rates               0x4               ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
 GLB_PTRF_TIM1_CTC   0x2               ./MCAL/TIMER/TIMER_prg.o
 G_ISR_INT0_ptr      0x2               ./MCAL/EXTI/EXTI_prg.o
 G_f32CurrentBPM     0x4               ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
 lpbFilterIR         0xc               ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
 dcFilterIR          0x8               ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+beatAvg             0x2               ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
 meanDiffIR          0x42              ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
 GLB_PTRF_TIM2_CTC   0x2               ./MCAL/TIMER/TIMER_prg.o
 G_u8BPMIndex        0x1               ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
 GLB_PTRF_TIM0_CTC   0x2               ./MCAL/TIMER/TIMER_prg.o
+G_u16Cbuf           0x40              ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
 GLB_PTRF_TIM2_OVF   0x2               ./MCAL/TIMER/TIMER_prg.o
 G_f32ValuesBPMSum   0x4               ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
 G_u32LastBeatThreshold
@@ -71,6 +80,8 @@ G_PTR_FUNC_RX       0x2               ./MCAL/UART/UART_prg.o
 G_u8CurrentPulseDetectorState
                     0x1               ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
 G_ISR_INT2_ptr      0x2               ./MCAL/EXTI/EXTI_prg.o
+G_u16IRAcSignalPrevious
+                    0x2               ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
 GLB_PTRF_TIM1_ICU   0x2               ./MCAL/TIMER/TIMER_prg.o
 
 Memory Configuration
@@ -189,7 +200,7 @@ LOAD d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bi
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x293e
+.text           0x00000000     0x2c30
  *(.vectors)
  .vectors       0x00000000       0x54 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -227,10 +238,10 @@ LOAD d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bi
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x00000060       0x10 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
-                0x00000060                __do_clear_bss
- .init4         0x00000070       0x16 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
-                0x00000070                __do_copy_data
+ .init4         0x00000060       0x16 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000060                __do_copy_data
+ .init4         0x00000076       0x10 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000076                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -262,8 +273,10 @@ LOAD d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bi
  .text          0x00000092        0x0 ./MCAL/DIO/DIO_prg.o
  .text          0x00000092        0x0 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
  .text          0x00000092        0x0 ./App/main.o
+ .text          0x00000092        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
  .text          0x00000092        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
  .text          0x00000092        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000092        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
  .text          0x00000092        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
  .text          0x00000092       0x58 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
                 0x00000092                __fixunssfsi
@@ -289,7 +302,6 @@ LOAD d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bi
                 0x00000a0e                __floatunsisf
  .text          0x00000b00        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
  .text          0x00000b00        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .text          0x00000b00        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
  .text          0x00000b00       0x9e d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
                 0x00000b00                __clzsi2
  .text          0x00000b9e      0x1aa d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
@@ -481,71 +493,88 @@ LOAD d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bi
  .text.HR_OXIMETER_vLowPassButterworthFilter
                 0x00001ed2       0x8a ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
                 0x00001ed2                HR_OXIMETER_vLowPassButterworthFilter
+ .text.HR_OXIMETER_u16AverageDcEstimator
+                0x00001f5c       0x56 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x00001f5c                HR_OXIMETER_u16AverageDcEstimator
+ .text.HR_OXIMETER_u16LowPassFIRFilter
+                0x00001fb2      0x100 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x00001fb2                HR_OXIMETER_u16LowPassFIRFilter
+ .text.HR_OXIMETER_u8CheckForBeat
+                0x000020b2      0x114 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x000020b2                HR_OXIMETER_u8CheckForBeat
+ .text.HR_OXIMETER_u32Mull16
+                0x000021c6       0x26 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x000021c6                HR_OXIMETER_u32Mull16
  .text.HR_OXIMETER_vCountsMillis
-                0x00001f5c       0x28 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x00001f5c                HR_OXIMETER_vCountsMillis
+                0x000021ec       0x28 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x000021ec                HR_OXIMETER_vCountsMillis
  .text.sendCharTOSw
-                0x00001f84       0x18 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x00001f84                sendCharTOSw
+                0x00002214       0x18 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x00002214                sendCharTOSw
  .text.sendToDebugSw
-                0x00001f9c       0xa2 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x00001f9c                sendToDebugSw
+                0x0000222c       0xa2 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x0000222c                sendToDebugSw
  .text.send32BitDatatoDebugger
-                0x0000203e       0x36 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x0000203e                send32BitDatatoDebugger
+                0x000022ce       0x36 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x000022ce                send32BitDatatoDebugger
  .text.display_HeartRate_Oxygen
-                0x00002074       0x5a ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x00002074                display_HeartRate_Oxygen
+                0x00002304       0x5a ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x00002304                display_HeartRate_Oxygen
  .text.display_data_Collected
-                0x000020ce       0x5a ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x000020ce                display_data_Collected
+                0x0000235e       0x5a ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x0000235e                display_data_Collected
  .text.sendStringToDebugSw
-                0x00002128       0x2a ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x00002128                sendStringToDebugSw
+                0x000023b8       0x2a ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x000023b8                sendStringToDebugSw
  .text.toggle_led
-                0x00002152       0x44 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x00002152                toggle_led
+                0x000023e2       0x44 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x000023e2                toggle_led
  .text.HR_OXIMETER_u8GetRegContentOnce
-                0x00002196       0x4e ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x00002426       0x4e ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
  .text.HR_OXIMETER_vGetPartINFO
-                0x000021e4       0x2e ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x000021e4                HR_OXIMETER_vGetPartINFO
+                0x00002474       0x2e ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x00002474                HR_OXIMETER_vGetPartINFO
  .text.HR_OXIMETER_vWrtRegContent
-                0x00002212       0x50 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x000024a2       0x50 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
  .text.HR_OXIMETER_ReadFIFO
-                0x00002262      0x138 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x00002262                HR_OXIMETER_ReadFIFO
+                0x000024f2      0x138 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x000024f2                HR_OXIMETER_ReadFIFO
+ .text.HR_OXIMETER_vHeartRate
+                0x0000262a       0x60 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x0000262a                HR_OXIMETER_vHeartRate
  .text.HR_OXIMETER_vCalculateHeartRateAndOxygen
-                0x0000239a      0x334 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x0000239a                HR_OXIMETER_vCalculateHeartRateAndOxygen
+                0x0000268a      0x2f8 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x0000268a                HR_OXIMETER_vCalculateHeartRateAndOxygen
  .text.HR_OXIMETER_vCollectGroupOfSamples
-                0x000026ce       0x60 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x000026ce                HR_OXIMETER_vCollectGroupOfSamples
+                0x00002982       0x60 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x00002982                HR_OXIMETER_vCollectGroupOfSamples
  .text.HR_OXIMETER_vInit
-                0x0000272e      0x132 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x0000272e                HR_OXIMETER_vInit
+                0x000029e2      0x132 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x000029e2                HR_OXIMETER_vInit
  .text.TURONLED
-                0x00002860        0xc ./App/main.o
-                0x00002860                TURONLED
- .text.main     0x0000286c       0x34 ./App/main.o
-                0x0000286c                main
+                0x00002b14        0xc ./App/main.o
+                0x00002b14                TURONLED
+ .text.main     0x00002b20       0x34 ./App/main.o
+                0x00002b20                main
  .text.testUART
-                0x000028a0       0x14 ./App/main.o
-                0x000028a0                testUART
- .text.libgcc   0x000028b4       0x18 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
-                0x000028b4                __udivmodqi4
- .text.libgcc   0x000028cc        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x000028cc        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x000028cc       0x38 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x000028cc                __prologue_saves__
- .text.libgcc   0x00002904       0x36 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00002904                __epilogue_restores__
- .text.libgcc   0x0000293a        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
-                0x0000293a                . = ALIGN (0x2)
+                0x00002b54       0x14 ./App/main.o
+                0x00002b54                testUART
+ .text.libgcc   0x00002b68       0x3e d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x00002b68                __mulsi3
+ .text.libgcc   0x00002ba6       0x18 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+                0x00002ba6                __udivmodqi4
+ .text.libgcc   0x00002bbe        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00002bbe        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00002bbe        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00002bbe       0x38 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00002bbe                __prologue_saves__
+ .text.libgcc   0x00002bf6       0x36 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00002bf6                __epilogue_restores__
+                0x00002c2c                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000293a        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x0000293a                exit
-                0x0000293a                _exit
+ .fini9         0x00002c2c        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00002c2c                exit
+                0x00002c2c                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -564,11 +593,11 @@ LOAD d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bi
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000293a        0x4 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00002c2c        0x4 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000293e                _etext = .
+                0x00002c30                _etext = .
 
-.data           0x00800060      0x108 load address 0x0000293e
+.data           0x00800060      0x124 load address 0x00002c30
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -580,8 +609,10 @@ LOAD d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bi
  .data          0x00800060        0x0 ./MCAL/DIO/DIO_prg.o
  .data          0x00800060        0x0 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
  .data          0x00800060        0x0 ./App/main.o
+ .data          0x00800060        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
  .data          0x00800060        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
  .data          0x00800060        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800060        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
  .data          0x00800060        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
  .data          0x00800060        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
  .data          0x00800060        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
@@ -597,7 +628,6 @@ LOAD d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bi
  .data          0x00800068        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
  .data          0x00800068        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
  .data          0x00800068        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .data          0x00800068        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
  .data          0x00800068        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
  .data          0x00800068        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
  .data          0x00800068        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
@@ -605,129 +635,167 @@ LOAD d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bi
  .data          0x00800068      0x100 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
                 0x00800068                __clz_tab
  *(.data*)
+ .data.G_u16IRAcMax
+                0x00800168        0x2 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x00800168                G_u16IRAcMax
+ .data.G_u16IRAcMin
+                0x0080016a        0x2 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x0080016a                G_u16IRAcMin
  *(.rodata)
  *(.rodata*)
+ .rodata.FIRCoeffs
+                0x0080016c       0x18 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
  *(.gnu.linkonce.d*)
-                0x00800168                . = ALIGN (0x2)
-                0x00800168                _edata = .
-                0x00800168                PROVIDE (__data_end, .)
+                0x00800184                . = ALIGN (0x2)
+                0x00800184                _edata = .
+                0x00800184                PROVIDE (__data_end, .)
 
-.bss            0x00800168       0xed
-                0x00800168                PROVIDE (__bss_start, .)
+.bss            0x00800184      0x14f
+                0x00800184                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .bss           0x00800168        0x0 ./MCAL/UART/UART_prg.o
- .bss           0x00800168        0x0 ./MCAL/TWI/TWI_prg.o
- .bss           0x00800168        0x0 ./MCAL/TIMER/TIMER_prg.o
- .bss           0x00800168        0x0 ./MCAL/GIE/GIE_prg.o
- .bss           0x00800168        0x0 ./MCAL/EXTI/EXTI_prg.o
- .bss           0x00800168        0x0 ./MCAL/DIO/DIO_prg.o
- .bss           0x00800168        0x0 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
- .bss           0x00800168        0x0 ./App/main.o
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_si_to_sf.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
- .bss           0x00800168        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x00800184        0x0 ./MCAL/UART/UART_prg.o
+ .bss           0x00800184        0x0 ./MCAL/TWI/TWI_prg.o
+ .bss           0x00800184        0x0 ./MCAL/TIMER/TIMER_prg.o
+ .bss           0x00800184        0x0 ./MCAL/GIE/GIE_prg.o
+ .bss           0x00800184        0x0 ./MCAL/EXTI/EXTI_prg.o
+ .bss           0x00800184        0x0 ./MCAL/DIO/DIO_prg.o
+ .bss           0x00800184        0x0 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+ .bss           0x00800184        0x0 ./App/main.o
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_si_to_sf.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x00800184        0x0 d:/embeded systems/imt course/imt tools/01 imt sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
  *(.bss*)
  .bss.G_u8DataSend
-                0x00800168        0x1 ./MCAL/UART/UART_prg.o
+                0x00800184        0x1 ./MCAL/UART/UART_prg.o
  .bss.L_u32Counter.1526
-                0x00800169        0x4 ./MCAL/TIMER/TIMER_prg.o
- .bss.L_u32Counter.1518
-                0x0080016d        0x4 ./MCAL/TIMER/TIMER_prg.o
- .bss.L_u32Counter.1508
-                0x00800171        0x4 ./MCAL/TIMER/TIMER_prg.o
- .bss.L_u32Counter.1500
-                0x00800175        0x4 ./MCAL/TIMER/TIMER_prg.o
- .bss.G_u32Timer0Counts
-                0x00800179        0x4 ./MCAL/TIMER/TIMER_prg.o
- .bss.G_u32Timer2Counts
-                0x0080017d        0x4 ./MCAL/TIMER/TIMER_prg.o
- .bss.G_u32Timer0PreLoad
-                0x00800181        0x4 ./MCAL/TIMER/TIMER_prg.o
- .bss.G_u32Timer2PreLoad
                 0x00800185        0x4 ./MCAL/TIMER/TIMER_prg.o
+ .bss.L_u32Counter.1518
+                0x00800189        0x4 ./MCAL/TIMER/TIMER_prg.o
+ .bss.L_u32Counter.1508
+                0x0080018d        0x4 ./MCAL/TIMER/TIMER_prg.o
+ .bss.L_u32Counter.1500
+                0x00800191        0x4 ./MCAL/TIMER/TIMER_prg.o
+ .bss.G_u32Timer0Counts
+                0x00800195        0x4 ./MCAL/TIMER/TIMER_prg.o
+ .bss.G_u32Timer2Counts
+                0x00800199        0x4 ./MCAL/TIMER/TIMER_prg.o
+ .bss.G_u32Timer0PreLoad
+                0x0080019d        0x4 ./MCAL/TIMER/TIMER_prg.o
+ .bss.G_u32Timer2PreLoad
+                0x008001a1        0x4 ./MCAL/TIMER/TIMER_prg.o
  .bss.G_u32Millis
-                0x00800189        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x00800189                G_u32Millis
+                0x008001a5        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001a5                G_u32Millis
  .bss.G_f32IrAcValueSqSum
-                0x0080018d        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x0080018d                G_f32IrAcValueSqSum
+                0x008001a9        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001a9                G_f32IrAcValueSqSum
  .bss.G_f32RedAcValueSqSum
-                0x00800191        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x00800191                G_f32RedAcValueSqSum
+                0x008001ad        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001ad                G_f32RedAcValueSqSum
  .bss.G_f32CurrentSaO2Value
-                0x00800195        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x00800195                G_f32CurrentSaO2Value
+                0x008001b1        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001b1                G_f32CurrentSaO2Value
  .bss.G_u16SamplesRecorded
-                0x00800199        0x2 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x00800199                G_u16SamplesRecorded
+                0x008001b5        0x2 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001b5                G_u16SamplesRecorded
  .bss.G_u16PulseDetected
-                0x0080019b        0x2 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x0080019b                G_u16PulseDetected
- .bss.L_u32LastBeat.1622
-                0x0080019d        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
- .bss.L_u32CurrentBeat.1621
-                0x008001a1        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
- .bss.L_u8ValuesWentDown.1620
-                0x008001a5        0x1 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
- .bss.L_f32PrevSensorValue.1619
-                0x008001a6        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001b7        0x2 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001b7                G_u16PulseDetected
+ .bss.G_u16IRAcSignalCurrent
+                0x008001b9        0x2 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001b9                G_u16IRAcSignalCurrent
+ .bss.G_u16IRAcSignalMin
+                0x008001bb        0x2 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001bb                G_u16IRAcSignalMin
+ .bss.G_u16IRAcSignalMax
+                0x008001bd        0x2 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001bd                G_u16IRAcSignalMax
+ .bss.G_u16PositiveEdge
+                0x008001bf        0x2 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001bf                G_u16PositiveEdge
+ .bss.G_u32IRAvgReg
+                0x008001c1        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001c1                G_u32IRAvgReg
+ .bss.G_u8Offset
+                0x008001c5        0x1 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001c5                G_u8Offset
+ .bss.rateSpot  0x008001c6        0x1 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001c6                rateSpot
+ .bss.lastBeat  0x008001c7        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001c7                lastBeat
+ .bss.L_u32LastBeat.1647
+                0x008001cb        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+ .bss.L_u32CurrentBeat.1646
+                0x008001cf        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+ .bss.L_u8ValuesWentDown.1645
+                0x008001d3        0x1 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+ .bss.L_f32PrevSensorValue.1644
+                0x008001d4        0x4 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
  *(COMMON)
- COMMON         0x008001aa        0x2 ./MCAL/UART/UART_prg.o
-                0x008001aa                G_PTR_FUNC_RX
- COMMON         0x008001ac        0xe ./MCAL/TIMER/TIMER_prg.o
-                0x008001ac                GLB_PTRF_TIM0_OVF
-                0x008001ae                GLB_PTRF_TIM1_CTC
-                0x008001b0                GLB_PTRF_TIM2_CTC
-                0x008001b2                GLB_PTRF_TIM0_CTC
-                0x008001b4                GLB_PTRF_TIM2_OVF
-                0x008001b6                GLB_PTRF_TIM1_OVF
-                0x008001b8                GLB_PTRF_TIM1_ICU
- COMMON         0x008001ba        0x6 ./MCAL/EXTI/EXTI_prg.o
-                0x008001ba                G_ISR_INT1_ptr
-                0x008001bc                G_ISR_INT0_ptr
-                0x008001be                G_ISR_INT2_ptr
- COMMON         0x008001c0       0x95 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
-                0x008001c0                G_f32ValuesBPM
-                0x008001e8                G_f32CurrentBPM
-                0x008001ec                lpbFilterIR
-                0x008001f8                dcFilterIR
-                0x00800200                meanDiffIR
-                0x00800242                G_u8BPMIndex
-                0x00800243                G_f32ValuesBPMSum
-                0x00800247                G_u32LastBeatThreshold
-                0x0080024b                G_u8ValuesBPMCount
-                0x0080024c                dcFilterRed
-                0x00800254                G_u8CurrentPulseDetectorState
-                0x00800255                PROVIDE (__bss_end, .)
-                0x0000293e                __data_load_start = LOADADDR (.data)
-                0x00002a46                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x008001d8        0x2 ./MCAL/UART/UART_prg.o
+                0x008001d8                G_PTR_FUNC_RX
+ COMMON         0x008001da        0xe ./MCAL/TIMER/TIMER_prg.o
+                0x008001da                GLB_PTRF_TIM0_OVF
+                0x008001dc                GLB_PTRF_TIM1_CTC
+                0x008001de                GLB_PTRF_TIM2_CTC
+                0x008001e0                GLB_PTRF_TIM0_CTC
+                0x008001e2                GLB_PTRF_TIM2_OVF
+                0x008001e4                GLB_PTRF_TIM1_OVF
+                0x008001e6                GLB_PTRF_TIM1_ICU
+ COMMON         0x008001e8        0x6 ./MCAL/EXTI/EXTI_prg.o
+                0x008001e8                G_ISR_INT1_ptr
+                0x008001ea                G_ISR_INT0_ptr
+                0x008001ec                G_ISR_INT2_ptr
+ COMMON         0x008001ee       0xe5 ./HAL/HR_OXIMETER/HR_OXIMETER_prg.o
+                0x008001ee                G_f32ValuesBPM
+                0x00800216                beatsPerMinute
+                0x0080021a                G_u16NegativeEdge
+                0x0080021c                G_u16IRAverageEstimated
+                0x0080021e                rates
+                0x00800222                G_f32CurrentBPM
+                0x00800226                lpbFilterIR
+                0x00800232                dcFilterIR
+                0x0080023a                beatAvg
+                0x0080023c                meanDiffIR
+                0x0080027e                G_u8BPMIndex
+                0x0080027f                G_u16Cbuf
+                0x008002bf                G_f32ValuesBPMSum
+                0x008002c3                G_u32LastBeatThreshold
+                0x008002c7                G_u8ValuesBPMCount
+                0x008002c8                dcFilterRed
+                0x008002d0                G_u8CurrentPulseDetectorState
+                0x008002d1                G_u16IRAcSignalPrevious
+                0x008002d3                PROVIDE (__bss_end, .)
+                0x00002c30                __data_load_start = LOADADDR (.data)
+                0x00002d54                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800255        0x0
-                0x00800255                PROVIDE (__noinit_start, .)
+.noinit         0x008002d3        0x0
+                0x008002d3                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800255                PROVIDE (__noinit_end, .)
-                0x00800255                _end = .
-                0x00800255                PROVIDE (__heap_start, .)
+                0x008002d3                PROVIDE (__noinit_end, .)
+                0x008002d3                _end = .
+                0x008002d3                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)

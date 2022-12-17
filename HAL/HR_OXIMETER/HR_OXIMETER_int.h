@@ -87,6 +87,15 @@ static void HR_OXIMETER_vWrtRegContent(u8 A_u8SlaveAdd, u8 A_u8Reg, u8 A_u8RegCo
 DC_Filter HR_OXIMETER_DCRemoval(f32 A_FuncX, f32 A_PrevW, f32 alpha);
 f32 HR_OXIMETER_f32MeanDiff(f32 A_f32Input, MEANDiff_Filter *A_FilterValues);
 void HR_OXIMETER_vLowPassButterworthFilter(f32 A_f32Input, Butterworth_Filter *A_filterResult);
+
+/* *********************************************************** */
+/* SparkFun */
+/* *********************************************************** */
+void HR_OXIMETER_vHeartRate();
+u8 HR_OXIMETER_u8CheckForBeat(u32 A_u32Sample);
+u16 HR_OXIMETER_u16AverageDcEstimator(u32 *p, u16 x);
+u16 HR_OXIMETER_u16LowPassFIRFilter(u16 din);
+u32 HR_OXIMETER_u32Mull16(u16 x, u16 y);
 /* *********************************************************** */
 /* Counts Millis Since The Micro is On */
 /* *********************************************************** */
